@@ -1,6 +1,6 @@
 # :leaves: Spring_Boot
 
-INHA UMC Spring Boot 미션, 키워드 인증 레포지터리입니다!
+INHA UMC Spring Boot 미션, 키워드 인증 레포지토리입니다!
 
 ## 📁 디렉토리 구조
 
