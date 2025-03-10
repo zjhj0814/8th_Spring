@@ -2,8 +2,6 @@
 
 INHA UMC Spring Boot 미션, 키워드 인증 레포지터리입니다!
 
-## 💻 Member
-
 ## 📁 디렉토리 구조
 
 ```bash
