@@ -16,8 +16,8 @@
       - IPv4: 127.X.X.X(대부분 127.0.0.1 사용)
       - IPv6: ::1(0:0:0:0:0:0:1의 약자)
   - IP 주소 vs MAC 주소
-  
-    ![img.png](img.png)
+
+![Image](https://github.com/user-attachments/assets/f04b8bf8-40ec-4787-89d9-f0146b01750f)
 ***
 # PORT
 네트워크 서비스나 **특정 프로세스를 식별**하는 논리단위이다. 각 포트는 번호로 구별되며 이 번호를 포트 번호라고 한다.
@@ -40,9 +40,10 @@ CIDR은 Classless Inter-Domain Routing의 약자로 인터넷 상의 데이터 �
 
 크게 와닿지 않으니, CIDR 표기법을 이해하고 클래스 기반 IP 주소와 비교하여 이점을 살펴보겠다.
 
-- CIDR 표기법 
-  ![img_2.png](img_2.png)
-  ![img_1.png](img_1.png)
+- CIDR 표기법
+  ![Image](https://github.com/user-attachments/assets/d5d1d338-3bfd-4bca-a1a7-bf7290bb6d10)
+  ![Image](https://github.com/user-attachments/assets/f4efedb6-e58c-4bb6-8bf5-bf13e3532f18)
+
   `a.b.c.d/x` (x: 네트워크 부분의 비트 수 -> x에 따라서 할당되는 호스트의 수를 조정할 수 있다.)
   > ex. 10.10.0.0/24는 네트워크 부분 24bit(10.10.0)과 호스트 부분 8bit(.0)으로 구분할 수 있고, 
   > 10.10.0.0~10.10.0.255까지 사용 가능하다.
@@ -63,7 +64,8 @@ CIDR은 Classless Inter-Domain Routing의 약자로 인터넷 상의 데이터 �
 # TCP와 UDP 차이
 ## TCP
 Transmission Control Protocol은 IP 규칙으로만 통신하기에 부족하거나 불안정하던 여러 단점들(패킷 순서, 패킷 유실, ...)을 보완하기 위해 패킷 전송을 제어하여 신뢰성을 보증하는 프로토콜이다.
-![img_3.png](img_3.png)
+![Image](https://github.com/user-attachments/assets/7126ae2a-cc34-4ecb-b9c8-c17d0b441d52)
+
 > 🤔 통신을 시작할 때는 3-way? 통신을 마칠 때는 4-way?
 > 
 > 서버 설계에 따라 FIN+ACK을 동시에 보낼 경우 3-way handshake로도 종료될 수 있다.
@@ -74,7 +76,8 @@ Transmission Control Protocol은 IP 규칙으로만 통신하기에 부족하거
   - Selective Repeat 기법: 오류난 데이터만 재전송하고, 순서가 잘못된 데이터를 재정렬하는 방법
 3. 혼잡 제어(Congestion Control): 네트워크 혼잡 상태가 감지되면 송신 측에서 전송 데이터 크기를 조절하여 전송량을 제어한다.
 ## TCP와 UDP 차이
-![img_4.png](img_4.png)
+![Image](https://github.com/user-attachments/assets/ed71bef6-9629-4a7a-874c-4e4fff3b51f8)
+
 - 연결 방식: TCP는 연결형 서비스로 3-way handshake, 4-way handshake 연결 설정, 종료 과정이 존재하지만, 
 
   UDP는 비연결형 서비스로 연결 설정과 종료 과정이 없다.
@@ -130,4 +133,4 @@ WAS는 애플리케이션 코드를 실행하는 데 더 특화된 서버이다.
   이에 대비하여 WAS나 DB 장애 시 웹 서버가 오류 화면을 제공할 수 있는 구조다.
 ***
 ### 실습
-![img_5.png](img_5.png)
+![Image](https://github.com/user-attachments/assets/1083537e-65f3-4052-ba9c-b19bc63e4e78)
