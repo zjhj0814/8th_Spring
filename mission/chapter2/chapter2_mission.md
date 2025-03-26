@@ -33,9 +33,9 @@ LIMIT 15;
 ### 2. 리뷰 작성하는 쿼리(사진의 경우 일단 배제)
 > 💡 review 테이블을 만들 때, review_id를 AUTO_INCREMENT로, reply 디폴트 값을 NULL로 설정했다고 가정한다.
 ```mysql
-INSERT INTO review (store_id, member_id, rating, content, created_at) VALUES ({store_id}, {member_id}, {rating}, {content});
+INSERT INTO review (store_id, member_id, rating, content, created_at) VALUES ({store_id}, {member_id}, {rating}, {content}, {created_at});
 
--- INSERT INTO review (store_id, member_id, rating, content, created_at) VALUES (1, 1, 5, '음 너무 맛있어요');
+-- INSERT INTO review (store_id, member_id, rating, content, created_at) VALUES (1, 1, 5, '음 너무 맛있어요', NOW());
 ```
 ### 3. 홈 화면 쿼리(현재 선택된 지역에서 도전이 가능한 미션 목록, 페이징 포함)
 + 미션 데드라인 ASC, 미션 id DESC
