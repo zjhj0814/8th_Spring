@@ -55,6 +55,7 @@ SELECT m.id, m.store_id, m.content, m.price_term, m.point, m.deadline, s.name
 FROM store AS s
 JOIN mission AS m ON s.id = m.store_id
 WHERE s.region_id = {region_id}
+  AND m.deadline > now()
   AND m.id NOT IN
     ( SELECT mission_id
     FROM member_mission
@@ -72,6 +73,7 @@ SELECT m.id, m.store_id, m.content, m.price_term, m.point, m.deadline, s.name, C
 FROM store AS s 
 JOIN mission AS m ON s.id = m.store_id
 WHERE s.region_id = {region_id} 
+  AND m.deadline > now()
   AND m.id NOT IN
     ( SELECT mission_id
     FROM member_mission
@@ -86,7 +88,7 @@ LIMIT 5;
 > `UNIX_TIMESTAMP`: 날짜 인수 값을 1970-01-01 00:00:00 UTC 이후 초 단위로 반환
 ### 4. 마이 페이지 화면 쿼리
 ```mysql
-SELECT m.nickname, m.email, m.point,
+SELECT m.id, m.nickname, m.email, m.point,
     CASE 
            WHEN m.is_auth = 'Y' THEN m.phone_num
             ELSE '미인증'
