@@ -41,8 +41,8 @@ return queryFactory
                 store.name
                 ))
         .from(mission)
-        .join(memberMission).on(mission.id.eq(memberMission.mission.id))
-        .join(store).on(mission.store.id.eq(store.id))
+        .join(memberMission)
+        .join(store)
         .where(predicate)
         .orderBy(memberMission.createdAt.desc(), mission.id.desc())
         .limit(15)
@@ -118,7 +118,7 @@ return queryFactory
             store.name
             ))
         .from(mission)
-        .join(store).on(mission.store.id.eq(store.id))
+        .join(store)
         .where(predicate)
         .orderBy(mission.deadline.asc(), mission.id.asc())
         .limit(5)
