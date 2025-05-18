@@ -8,5 +8,15 @@
 ![Image](https://github.com/user-attachments/assets/1549b449-d90b-4792-8a05-5eb763bf5911)
 ***
 # 4. ❗**필수**❗ ****RestControllerAdvice의 장점, 그리고 없을 경우 어떤 점이 불편한지도 조사하여 **미션 기록란**에 수록할 것
+# RestControllerAdvice
+`@ControllerAdvice`: 여러 컨트롤러에 대해 전역적으로 ExceptionHandler를 적용해 준다.
+
+`@RestControllerAdvice`: @ControllerAdvice와 달리 **@ResponseBody가 붙어 있어 응답을 Json으로 내려준다.**
+
+잘못된 URI를 호출하여 발생하는 NoHandlerFoundException 등 스프링 예외를 미리 처리해 둔 `ResponseEntityExceptionHandler`를 추상 클래스로 제공하고 있다. 따라서 ControllerAdvice 클래스가 이 추상 클래스를 상속받아 @Override 하면 된다.
+
+- 하나의 클래스로 모든 컨트롤러에 대해 **전역적으로** 예외 처리가 가능하다.
+- 직접 정의한 에러 응답을 **일관성 있게** 클라이언트에게 내려 줄 수 있다.
+- 별도의 try-catch문이 없어 코드의 **가독성**이 높아진다.
 ***
 # 5. ~~❗**필수**❗ **미션 목록 조회(진행중, 진행 완료) API 명세서** 작성하기 (이미 작성되어 있으면 상관 없음!)~~
